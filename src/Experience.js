@@ -28,18 +28,36 @@ import mui19 from './img/port/mui28.png'
 import mui20 from './img/port/mui29.png'
 import dui1 from './img/port/dui1.png'
 
+
 AOS.init()
 
-class Experience extends Component{
-    render(){
-        const exList='ex-list'
-        return(
-            <div className='Experience' id='experience'> 
+class Experience extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            btnExpandtxt: 'Expand My Work'
+        }
+        this.expandPort = this.expandPort.bind(this);
+    }
+
+    expandPort() {
+        if (this.state.btnExpandtxt === 'Expand My Work') {
+            this.setState({ btnExpandtxt: 'Hide' })
+        }
+        else {
+            this.setState({ btnExpandtxt: 'Expand My Work' })
+        }
+
+    }
+    render() {
+        const exList = 'ex-list'
+        return (
+            <div className='Experience' id='experience'>
                 <div className='ex-wrap px-3 '>
                     <div className='ex-header sec-header pb-4'>
                         <p> EXPERIENCE </p>
                     </div>
-                    
+
                     <div className='ex-info '>
                         <div className='ex-info-block1 '>
                             <div className='verLine' ></div>
@@ -50,7 +68,7 @@ class Experience extends Component{
                         </div>
                         <div className='ex-info-block2 '>
                             <div className='verLine right'></div>
-                            <div className='ex-text tr ml-auto' data-aos='fade-left'data-aos-easing='ease-out-back' data-aos-duration='1000' data-aos-delay='200'>
+                            <div className='ex-text tr ml-auto' data-aos='fade-left' data-aos-easing='ease-out-back' data-aos-duration='1000' data-aos-delay='200'>
                                 <div className={exList}> Software Developer (C#.Net) </div>
                                 <div className={exList}> UX/UI Designer (Creative Network Technology) </div>
                             </div>
@@ -58,10 +76,16 @@ class Experience extends Component{
                     </div>
 
                     <div className='ex-port'>
-                        <div className='ex-header sec-header pt-5'>
+                        <div className='ex-header sec-header pt-5 pb-3'>
                             <p> MY DESIGN WORK </p>
                         </div>
-                        <div className='port-row row justify-content-md-center pt-4'>
+                        <button id='btnExpandPort' className="btn btn-custom" type="button" data-toggle="collapse"
+                            data-target="#collapsePort" aria-expanded="false" aria-controls="collapsePort"
+                            onClick={this.expandPort}>
+                            {this.state.btnExpandtxt}
+                        </button>
+
+                        <div className='port-row row justify-content-md-center pt-4 collapse' id='collapsePort'>
                             <div className='port-item col-6 col-md-4 '>
                                 <img className='img-port ' src={mui1} alt=''></img>
                             </div>
@@ -134,17 +158,28 @@ class Experience extends Component{
                             <div className='port-item col-6 col-md-4 '>
                                 <img className='img-port ' src={icon4} alt=''></img>
                             </div>
-                            <div className='webui-link'>
-                                <img className='img-webui img-port' src={dui1} alt='' ></img>
-                                <div className='webui-link-overlay'></div>
+                            <div className='inline-block'>
+                                <div className='webui-link'>
+                                    <a className='webui-url' href='http://tpso12.m-society.go.th/th/images/HealingWeb/Website/healing.html' target="_blank">
+                                        <img className='img-webui img-port' src={dui1} alt='' ></img>
+                                        <div className='text'> <p> Visit Website </p> </div>
+                                        <div className='webui-link-overlay'></div>
+                                    </a>
+                                </div>
+                                <div className='pt-5'>
+                                    <button id='btnExpandPort' className="btn btn-custom" type="button" data-toggle="collapse"
+                                        data-target="#collapsePort" aria-expanded="false" aria-controls="collapsePort"
+                                        onClick={this.expandPort}>
+                                        {this.state.btnExpandtxt}
+                                    </button>
+                                </div>
                             </div>
-
 
                         </div>
 
                     </div>
-                        
-                    
+
+
                 </div>
             </div>
         )

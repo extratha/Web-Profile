@@ -77,8 +77,8 @@ html{
     z-index: 99;
 }
 
-.show{
-    display: block !important;
+.nav-canvas.show , .overlay.backblur.show{
+    display: block ;
     opacity: 1;
 }
 
@@ -367,6 +367,11 @@ hr{
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     padding-right: 1rem;
+    text-shadow:
+    -1px -1px 5px rgb(207, 207, 207),  
+    1px -1px  5px   rgb(207, 207, 207),
+    -1px 1px 5px rgb(207, 207, 207),
+    1px 1px 5px rgb(207, 207, 207);
 }
 
 @media screen and (max-width: 600px) {
@@ -499,16 +504,33 @@ hr{
 }
 
 .port-row{
-    display: flex;
+    display: flex ;
     justify-content: center;
 }
+
+.port-row.inline-block{
+    display:inline-block;
+}
+
+
+.btn.btn-custom , .btn.btn-custom:focus{
+    background-color: #5e276b;
+    color:white;
+    box-shadow: none;
+    position: relative;
+    border-radius: 50px;
+}
+
+.btn.btn-custom:hover , .btn-custom:focus:hover {
+    color: rgb(253, 192, 207);
+}
+
 
 .port-item{
     border : 0px;
     border-color: red;
     border-style: dashed;
     position : relative;
-    display: table;
     vertical-align: middle !important;
     padding : 2rem !important;
     float:none;
@@ -521,6 +543,9 @@ hr{
 .webui-link{
     position : relative;
     width:80%;
+    left:0;
+    right:0;
+    margin:auto;
 }
 
 .webui-link-overlay{
@@ -532,18 +557,33 @@ hr{
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: .5s ease;
-    background-color: black;
+    transition: .3s ease;
+    background-color: rgb(22, 13, 20);
     opacity: 0;
 }
 
-
-
-.webui-link-overlay :hover .webui-link-overlay{ 
+.webui-link:hover .webui-link-overlay{ 
+    opacity : 0.9;
+    cursor: pointer;
+}
+.webui-link:hover .text{
     opacity : 1;
     cursor: pointer;
 }
 
+.webui-link .text{
+    color : white;
+    font-size: 20px;
+    opacity : 0;
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 100;
+}
 
 .ex-info-block1{
     height: 200px;
