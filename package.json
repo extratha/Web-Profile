@@ -5,6 +5,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "bootstrap": "^4.4.1",
+    "firebase": "^8.2.9",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
@@ -13,6 +14,7 @@
     "react-scripts": "^4.0.3",
     "react-scroll": "^1.7.15",
     "styled-components": "^4.4.1",
+    "trim": "^1.0.0",
     "webkit-npm": "^3.1.1"
   },
   "scripts": {
