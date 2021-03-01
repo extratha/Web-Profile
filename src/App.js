@@ -8,7 +8,8 @@ import Education from "./Education";
 import Experience from "./Experience";
 import Skills from "./Skills";
 import Contact from "./Contact";
-import firebase from "firebase";
+import MessageBox from "./MessageBox";
+import MasterData from "./firebase_firestore";
 
 class App extends Component {
   constructor(props) {
@@ -16,10 +17,7 @@ class App extends Component {
     this.state = {
       _overlay: "overlay backblur",
     };
-    var firebaseConfig = {};
-    firebase.initializeApp(firebaseConfig);
-    console.log(firebase);
-  };
+  }
   callbackFunction = (overlayFromNav) => {
     this.setState({ _overlay: overlayFromNav });
   };
@@ -37,6 +35,7 @@ class App extends Component {
         <Experience></Experience>
         <Skills></Skills>
         <Contact></Contact>
+        <MessageBox></MessageBox>
       </div>
     );
   }
