@@ -7,12 +7,9 @@ class MessageBox extends Component {
       _overlay: "overlay backblur",
     };
   }
-  componentDidMount() {
-      
-  }
+  componentDidMount() {}
   render() {
-    return;
-    <div className="message-box"></div>;
+    return <div className="message-box"></div>;
   }
 }
 

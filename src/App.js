@@ -9,7 +9,6 @@ import Experience from "./Experience";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import MessageBox from "./MessageBox";
-import MasterData from "./firebase_firestore";
 
 class App extends Component {
   constructor(props) {
