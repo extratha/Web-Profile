@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./style/App.css";
 import Nav1 from "./Nav1";
 import Intro from "./Intro";
 import Profile from "./Profile";
@@ -9,6 +9,7 @@ import Experience from "./Experience";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import MessageBox from "./MessageBox";
+import Rating from "./Rating";
 
 class App extends Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class App extends Component {
         <Skills></Skills>
         <Contact></Contact>
         <MessageBox></MessageBox>
+        <Rating></Rating>
       </div>
     );
   }

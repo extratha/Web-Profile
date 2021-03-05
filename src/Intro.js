@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './style/App.css';
 import profile from './img/profile.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

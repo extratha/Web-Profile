@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './style/App.css';
 import mail from './img/contact/mail.svg'
 import fb from './img/contact/fb.svg'
 import linkedin from './img/contact/linkedin.svg'

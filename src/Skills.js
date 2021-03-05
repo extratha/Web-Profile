@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './style/App.css';
 import js from './img/langlogo/js.png'
 import css from './img/langlogo/css.png'
 import html from './img/langlogo/html.png'

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "./img/logo2.svg";
 import exNav from "./img/exNav.png";
 import cross from "./img/cross.png";
-import "./App.css";
+import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 

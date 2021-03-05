@@ -12,18 +12,38 @@ firebase.initializeApp({
 const db = firebase.firestore();
 export default class MasterData {
   collection_name;
+  collectionRef;
   constructor(collection_name) {
     this.collection_name = collection_name;
+    this.collectionRef = db.collection(this.collection_name);
   }
-  async getCollectionList(page, item_per_page) {
+  async getCollectionList(page, item_per_page, filter) {
     let data = [];
     if (!item_per_page) item_per_page = 10;
-    const collectionRef = db.collection(this.collection_name);
-    const response = await collectionRef.orderBy("id").get();
-    response.forEach(doc => {
-      const docData = doc.data()
-      data.push(docData)
-    })
+    let query = this.collectionRef.orderBy("id");
+    if (filter) {
+      for (const key in filter) {
+        console.log(key, filter[key])
+        query = query.where(key, "==", filter[key]);
+      }
+    }
+    const response = await query.get();
+    response.forEach((doc) => {
+      const docData = doc.data();
+      data.push(docData);
+    });
     return data;
+  }
+  async setCollection(data) {
+    try {
+      if (!data) throw "data is undefined.";
+      const response = await this.collectionRef.set(data);
+      if (response) {
+        console.log(response);
+      }
+      return response;
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

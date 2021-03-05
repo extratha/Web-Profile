@@ -1,21 +1,21 @@
 @font-face {
     font-family: PReg;
-    src: url('./Font/Prompt-Regular.ttf');
+    src: url('../Font/Prompt-Regular.ttf');
 }
 
 @font-face{
     font-family: PLight;
-    src : url('./Font/Prompt-Light.ttf');
+    src : url('../Font/Prompt-Light.ttf');
 }
 
 @font-face {
     font-family: PThin;
-    src: url('./Font/Prompt-Thin.ttf');
+    src: url('../Font/Prompt-Thin.ttf');
 }
 
 @font-face{
     font-family: PBold;
-    src: url('./Font/Prompt-Bold.ttf');
+    src: url('../Font/Prompt-Bold.ttf');
 }
 
 @-webkit-keyframes spin {

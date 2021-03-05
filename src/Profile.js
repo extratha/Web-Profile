@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './style/App.css';
 import cov from './img/covv.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
