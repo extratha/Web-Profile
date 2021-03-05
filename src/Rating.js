@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import $ from "jquery";
+import "./style/Rate.scss";
 import MasterData from "./firebase_firestore";
 import StarRatings from "react-star-ratings";
 
@@ -8,8 +9,10 @@ class Rating extends Component {
     super(props);
     this.state = {
       ip_address: null,
+      oldRate: null,
     };
-
+    this.beforeRate = React.createRef();
+    this.afterRate = React.createRef();
   }
   async componentDidMount() {
     const self = this;
@@ -22,23 +25,25 @@ class Rating extends Component {
     });
     if (response & (response.length > 0)) {
       const oldRate = localStorage.getItem("rated");
-      if (oldRate) console.log("rated");
-      else if (response[0].ip == self.state.ip_address) {
+      if (oldRate) {
         console.log("rated");
+        self.setState({ oldRate: oldRate });
+      } else if (response[0].ip == self.state.ip_address) {
+        console.log("rated");
+        self.setState({ oldRate: response[0].rate });
       }
     }
   }
   render() {
-    let beforeRate = "before show";
-    let afterRate = "after hidden";
-    let initRate
+    let initRate = 5;
+    if (this.state.oldRate) initRate = this.state.oldRate;
     return (
       <div>
-        <div className={beforeRate}>
-          <Rate id='beforeRate'></Rate>
+        <div >
+          <Rate initRate={initRate}></Rate>
         </div>
-        <div className={afterRate}>
-          <Rated id='afterRate'> </Rated>
+        <div>
+          <Rated initRate={initRate}> </Rated>
         </div>
       </div>
     );
@@ -48,27 +53,29 @@ class Rating extends Component {
 export default Rating;
 
 class Rate extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        rating: null,
-      };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      rating: null,
+    };
+  }
   changeRating(newRating, name) {
     this.setState({
       rating: newRating,
     });
   }
-
+  bindProps() {
+    if (this.props.initRate) this.setState({ rating: this.props.initRate });
+    console.log(this.state.rating);
+  }
   render() {
-    // rating = 2;
-    console.log('rate',this)
+    let rating = this.state.rating;
+    if (!rating) rating = 4;
     return (
       <StarRatings
-        rating={this.state.rating}
+        rating={rating}
         starRatedColor="blue"
         changeRating={this.changeRating}
-        numberOfStars={6}
         name="rating"
       />
     );
@@ -78,7 +85,8 @@ class Rate extends Component {
 class Rated extends Component {
   render() {
     // aggregateRating = 2.35;
-    console.log('rated', this)
+    console.log("rated", this);
+
     return (
       <StarRatings rating={2.403} starDimension="40px" starSpacing="15px" />
     );
