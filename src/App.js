@@ -36,7 +36,6 @@ class App extends Component {
         <Skills></Skills>
         <Contact></Contact>
         <MessageBox></MessageBox>
-        <Rating></Rating>
       </div>
     );
   }

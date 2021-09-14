@@ -61,16 +61,17 @@ class Experience extends Component {
                     <div className='ex-info '>
                         <div className='ex-info-block1 '>
                             <div className='verLine' ></div>
-                            <div className='ex-text ' data-aos='fade-right' data-aos-easing='ease-out-back' data-aos-duration='1000' data-aos-delay='200'>
-                                <div className={exList}> Teaching assistant (Prince of Songkla University)</div>
+                            <div className='ex-text pt-0 pt-sm-3 ' data-aos='fade-right' data-aos-easing='ease-out-back' data-aos-duration='1000' data-aos-delay='200'>
+                                <div className={exList} class="pt-0 pt-sm-4"> Teaching assistant (Prince of Songkla University)</div>
                                 <div className={exList}> Web developer (Freelance) </div>
+                                <div className={exList}> Software Developer (C#.Net) </div>
                             </div>
                         </div>
                         <div className='ex-info-block2 '>
                             <div className='verLine right'></div>
                             <div className='ex-text tr ml-auto' data-aos='fade-left' data-aos-easing='ease-out-back' data-aos-duration='1000' data-aos-delay='200'>
-                                <div className={exList}> Software Developer (C#.Net) </div>
                                 <div className={exList}> UX/UI Designer (Creative Network Technology) </div>
+                                <div className={exList}> Frontend Developer (EdVISORY Co., Ltd.) </div>
                             </div>
                         </div>
                     </div>
@@ -160,7 +161,7 @@ class Experience extends Component {
                             </div>
                             <div className='inline-block'>
                                 <div className='webui-link'>
-                                    <a className='webui-url' href='http://tpso12.m-society.go.th/th/images/HealingWeb/Website/healing.html' target="_blank">
+                                    <a className='webui-url' href='http://tpso12.m-society.go.th/th/images/HealingWeb/Website/healing.html' target="_blank" rel="noreferrer">
                                         <img className='img-webui img-port' src={dui1} alt='' ></img>
                                         <div className='text'> <p> Visit Website </p> </div>
                                         <div className='webui-link-overlay'></div>
