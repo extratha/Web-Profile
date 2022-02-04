@@ -35,25 +35,28 @@ class Experience extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            btnExpandtxt: 'Expand My Work'
+            btnExpandtxt: 'Expand My Work',
+            isDisabledExpandBtn : false
         }
         this.expandPort = this.expandPort.bind(this);
     }
 
     expandPort() {
+        this.state.isDisabledExpandBtn = true
         if (this.state.btnExpandtxt === 'Expand My Work') {
             this.setState({ btnExpandtxt: 'Hide' })
         }
         else {
             this.setState({ btnExpandtxt: 'Expand My Work' })
         }
+        this.state.isDisabledExpandBtn = false
 
     }
     render() {
         const exList = 'ex-list'
         return (
             <div className='Experience' id='experience'>
-                <div className='ex-wrap px-3 '>
+                <div className='ex-wrap px-3'>
                     <div className='ex-header sec-header pb-4'>
                         <p> EXPERIENCE </p>
                     </div>
@@ -62,7 +65,7 @@ class Experience extends Component {
                         <div className='ex-info-block1 '>
                             <div className='verLine' ></div>
                             <div className='ex-text pt-0 pt-sm-3 ' data-aos='fade-right' data-aos-easing='ease-out-back' data-aos-duration='1000' data-aos-delay='200'>
-                                <div className={exList} class="pt-0 pt-sm-4"> Teaching assistant (Prince of Songkla University)</div>
+                                <div className={exList} className="pt-0 pt-sm-4"> Teaching assistant (Prince of Songkla University)</div>
                                 <div className={exList}> Web developer (Freelance) </div>
                                 <div className={exList}> Software Developer (C#.Net) </div>
                             </div>
@@ -82,6 +85,7 @@ class Experience extends Component {
                         </div>
                         <button id='btnExpandPort' className="btn btn-custom" type="button" data-toggle="collapse"
                             data-target="#collapsePort" aria-expanded="false" aria-controls="collapsePort"
+                            disabled={this.state.isDisabledExpandBtn}
                             onClick={this.expandPort}>
                             {this.state.btnExpandtxt}
                         </button>
@@ -176,6 +180,23 @@ class Experience extends Component {
                                 </div>
                             </div>
 
+                        </div>
+                        <div className='ex-header sec-header ' style={{marginTop: '5rem'}}>
+                            <p> PORTFOLIO </p>
+                        </div>
+                        <div className="d-flex flex-wrap" >
+                            <div className="py-3 col-6 col-md-3 justify-content-center">
+                                <div className="port-item-circle " onClick={()=>{window.open('https://wespace.in.th/')}} ></div>
+                            </div>
+                            <div className="py-3 col-6 col-md-3">
+                                <div className="port-item-circle" onClick={()=>{window.open('https://wespace-cudson-qc.edvisory.co.th/#/')}}></div>
+                            </div>
+                            <div className="py-3 col-6 col-md-3">
+                                <div className="port-item-circle" onClick={()=>{window.open('https://www.intelligence-one.com/#/')}}/>
+                            </div>
+                            <div className="py-3 col-6 col-md-3">
+                                <div className="port-item-circle" onClick={()=>{window.open('https://eng-kpi-qc.edvisory.co.th/')}}/>
+                            </div>
                         </div>
 
                     </div>

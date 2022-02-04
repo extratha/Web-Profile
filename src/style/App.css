@@ -520,7 +520,9 @@ hr{
     display:inline-block;
 }
 
-
+.btn.btn-custom {
+    min-width: 159px;
+}
 .btn.btn-custom , .btn.btn-custom:focus{
     background-color: #5e276b;
     color:white;
@@ -542,6 +544,14 @@ hr{
     vertical-align: middle !important;
     padding : 2rem !important;
     float:none;
+}
+.port-item-circle {
+    width: 80px !important;
+    height: 80px !important; 
+    border-radius: 80px;
+    background-color:#754a8d;
+    margin: auto; 
+    cursor: pointer;
 }
 .img-port{
     max-width: 100%;

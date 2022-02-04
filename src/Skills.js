@@ -38,7 +38,7 @@ class Skills extends Component {
                     <div className='skills-info'>
                         <div className='sub-skills '>
                             <p className='program_s head_s'> Programming Languages : </p>
-                            <p className='program_s list_s '> HTML5, CSS3, Javascript, TypeScript, Java, C# </p>
+                            <p className='program_s list_s '> HTML5, SCSS, Javascript, TypeScript, Java, C# </p>
                         </div>
                         <div className='sub-skills  '>
                             <p className='framework_s head_s'> Framework & library :</p>
