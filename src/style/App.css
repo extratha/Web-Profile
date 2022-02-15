@@ -489,7 +489,6 @@ hr{
     display : block;
     margin : auto;
     max-width: 1200px;
-    padding-bottom: 6rem;
 }
 
 .ex-header{
@@ -538,7 +537,6 @@ hr{
 
 .port-item{
     border : 0px;
-    border-color: red;
     border-style: dashed;
     position : relative;
     vertical-align: middle !important;
@@ -546,12 +544,21 @@ hr{
     float:none;
 }
 .port-item-circle {
-    width: 80px !important;
-    height: 80px !important; 
+    width: 100px !important;
+    height: 100px !important; 
     border-radius: 80px;
-    background-color:#754a8d;
+    border: 2px solid #c574c1;
+    overflow: hidden;
     margin: auto; 
     cursor: pointer;
+    position: relative;
+
+}
+.port-item-image {
+    width: 76px;
+    height : 70px;
+    position: relative;
+    
 }
 .img-port{
     max-width: 100%;

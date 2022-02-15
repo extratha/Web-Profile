@@ -38,7 +38,6 @@ class Intro extends Component {
 
           </div>
           <div className="intro-blank-top">
-            <canvas id="canvas1" />
           </div>
 
           <div className="intro-floor shadow">

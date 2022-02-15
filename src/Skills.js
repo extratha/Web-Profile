@@ -17,7 +17,6 @@ class Skills extends Component {
                     <div className='sbg bgcss breath'>  </div>
                     <div className='sbg bghtml breath'> </div>
                     <div className='sbg bgcsh breath'>  </div>
-                    <div className='sbg bgjava breath'>  </div>
                 </div>
                 <div className='skills-blockimg'>
                     <div className='sbg'> <img src={js} alt='' className='langlogo'></img>  </div>
@@ -25,7 +24,6 @@ class Skills extends Component {
                     <div className='sbg'> <img src={css} alt='' className='langlogo'></img> </div>
                     <div className='sbg'> <img src={html} alt='' className='langlogo'></img> </div>
                     <div className='sbg'> <img src={csh} alt='' className='langlogo'></img> </div>
-                    <div className='sbg'> <img src={java} alt='' className='langlogo imgjava'></img> </div>
                 </div>
 
                 <div className='skills-wrap px-3'>
@@ -42,7 +40,7 @@ class Skills extends Component {
                         </div>
                         <div className='sub-skills  '>
                             <p className='framework_s head_s'> Framework & library :</p>
-                            <p className='framework_s list_s '> Vue2-3 js-ts, Bootstrap, ReactJS, .Net, NodeJS, PostgreSQL,</p>
+                            <p className='framework_s list_s '> Vue2-3 js-ts, Bootstrap, ReactJS,  NodeJS, Jest, .Net,</p>
                         </div>
                         <div className='sub-skills'>
                             <p className='tools_s head_s'> Tools :</p>
@@ -53,8 +51,8 @@ class Skills extends Component {
                             <p className='languages_s list_s'> Thai (Native), English (Beginner)</p>
                         </div>
                         <div className='sub-skills'>
-                            <p className='dm_s head_s'> Digital Media & Design : </p>
-                            <p className='dm_s list_s'> UX/UI Design, , Digital Painting, Video Editing</p>
+                            <p className='dm_s head_s'> Version Controls : </p>
+                            <p className='dm_s list_s'> Git CLI , gitlab , github</p>
                         </div>
                     </div>
                 </div>

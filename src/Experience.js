@@ -28,6 +28,10 @@ import mui19 from './img/port/mui28.png'
 import mui20 from './img/port/mui29.png'
 import dui1 from './img/port/dui1.png'
 
+import web1 from './img/port/web1.png'
+import web2 from './img/port/web2.png'
+import web3 from './img/port/web3.png'
+import web4 from './img/port/web4.png'
 
 AOS.init()
 
@@ -36,7 +40,7 @@ class Experience extends Component {
         super(props);
         this.state = {
             btnExpandtxt: 'Expand My Work',
-            isDisabledExpandBtn : false
+            isDisabledExpandBtn: false
         }
         this.expandPort = this.expandPort.bind(this);
     }
@@ -56,7 +60,7 @@ class Experience extends Component {
         const exList = 'ex-list'
         return (
             <div className='Experience' id='experience'>
-                <div className='ex-wrap px-3'>
+                <div className='ex-wrap pt-3'>
                     <div className='ex-header sec-header pb-4'>
                         <p> EXPERIENCE </p>
                     </div>
@@ -181,21 +185,29 @@ class Experience extends Component {
                             </div>
 
                         </div>
-                        <div className='ex-header sec-header ' style={{marginTop: '5rem'}}>
+                        <div className='ex-header sec-header ' style={{ marginTop: '5rem' }}>
                             <p> PORTFOLIO </p>
                         </div>
                         <div className="d-flex flex-wrap" >
-                            <div className="py-3 col-6 col-md-3 justify-content-center">
-                                <div className="port-item-circle " onClick={()=>{window.open('https://wespace.in.th/')}} ></div>
+                            <div className="py-5 col-6 col-md-3 justify-content-center"  >
+                                <div className="port-item-circle " onClick={() => { window.open('https://wespace.in.th/') }} >
+                                    <img src={web1} className="port-item-image" style={{ margin: '4px 0 0 0', left: '-4px' , top: '8px' }} />
+                                </div>
                             </div>
-                            <div className="py-3 col-6 col-md-3">
-                                <div className="port-item-circle" onClick={()=>{window.open('https://wespace-cudson-qc.edvisory.co.th/#/')}}></div>
+                            <div className="py-5 col-6 col-md-3" >
+                                <div className="port-item-circle" onClick={() => { window.open('https://wespace-cudson-qc.edvisory.co.th/#/') }}>
+                                    <img src={web2} className="port-item-image" style={{ top: '12px', left: '-1px' , width: '80px'}} />
+                                </div>
                             </div>
-                            <div className="py-3 col-6 col-md-3">
-                                <div className="port-item-circle" onClick={()=>{window.open('https://www.intelligence-one.com/#/')}}/>
+                            <div className="py-5 col-6 col-md-3" >
+                                <div className="port-item-circle" style={{backgroundColor: '#f80000'}} onClick={() => { window.open('https://www.intelligence-one.com/#/') }}>
+                                    <img src={web3} className="port-item-image" style={{  top: '12px' }} />
+                                </div>
                             </div>
-                            <div className="py-3 col-6 col-md-3">
-                                <div className="port-item-circle" onClick={()=>{window.open('https://eng-kpi-qc.edvisory.co.th/')}}/>
+                            <div className="py-5 col-6 col-md-3">
+                                <div className="port-item-circle" style={{backgroundColor: 'white'}} onClick={() => { window.open('https://eng-kpi-qc.edvisory.co.th/') }}>
+                                    <img src={web4} className="port-item-image" style={{ width: '100px', height: '70px', top: '13px', left: '-4px'}} />
+                                </div>
                             </div>
                         </div>
 
@@ -203,7 +215,7 @@ class Experience extends Component {
 
 
                 </div>
-            </div>
+            </div >
         )
     }
 
