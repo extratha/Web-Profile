@@ -66,7 +66,7 @@ class Nav1 extends Component {
           <div className={navStatus} id="nav-canvas">
             <div className="canvas-list px-3 mt-2 mb-5">
               <button
-                className="btn btn-light btncross"
+                className="btn  btncross"
                 type="button"
                 onClick={this.handleClick}
               >

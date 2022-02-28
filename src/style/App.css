@@ -175,6 +175,7 @@ ul .float-right .flex-row {
 
 .btncross{
     position: fixed;
+    background-color: transparent;
 }
 
 .nav-canvas-main a{
@@ -402,7 +403,11 @@ hr{
 }
 
 .jobs{
-    color :  rgb(174, 38, 228)
+    font-weight:700;
+    text-shadow: none;
+    background: linear-gradient(128deg, rgb(221, 84, 20) 0%, rgb(194, 10, 148) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
