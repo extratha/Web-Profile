@@ -30,14 +30,14 @@ class Profile extends Component {
                                 data-aos-easing={aosEasing}
                                 data-aos-duration={aosDuration}
                                 data-aos-offset={aosOffset}
-                                data-aos-delay='100'>I have 2 years plus in <span className='jobs'>Frontend Developer.</span> </div>
+                                data-aos-delay='100'>I have over 3 years of experience as a</div>
 
-                                {/* <div id="introduce" className="line-3" 
+                                <div id="introduce" className="line-3" 
                                 data-aos="fade-right"
                                 data-aos-easing={aosEasing}
                                 data-aos-duration={aosDuration}
                                 data-aos-offset={aosOffset}
-                                data-aos-delay='200'></div> */}
+                                data-aos-delay='200'> <span className='jobs'>Frontend Developer.</span> </div>
 
                                 <div id="introduce" className="line-4" 
                                 data-aos="fade-right"

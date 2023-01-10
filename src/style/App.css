@@ -28,7 +28,10 @@
     to { -webkit-transform: rotate(360deg); }
 }
 
-
+ 
+body {
+    overflow-x: hidden
+}
 
 .backblur{
     -webkit-backdrop-filter: blur(5px);
@@ -503,10 +506,16 @@ hr{
 
 .ex-info {
     display:block;
-    position: relative;
+    height: 440px;
     overflow : auto;
     overflow-x : hidden;
 }
+@media screen and (max-width : 800px){
+    .ex-info{
+        height: 470px;
+    }
+}
+
 
 .ex-port{
     position : relative;
