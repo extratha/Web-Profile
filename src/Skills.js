@@ -48,7 +48,7 @@ class Skills extends Component {
                         </div>
                         <div className='sub-skills'>
                             <p className='languages_s head_s'> Languages :  </p>
-                            <p className='languages_s list_s'> Thai (Native), English (Beginner - Speaking & Listening)</p>
+                            <p className='languages_s list_s'> Thai (Native), English (Beginner)</p>
                         </div>
                         <div className='sub-skills'>
                             <p className='dm_s head_s'> Version Controls : </p>
