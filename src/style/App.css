@@ -631,7 +631,7 @@ hr{
 .ex-info-block2{
     display:block;
     justify-content: end;
-    contain:content;
+    contain:layout;
 }
 
 
