@@ -840,6 +840,8 @@ hr{
 
 .contact-wrap{
     padding : 4rem 1rem 6rem ;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .contact-info{
