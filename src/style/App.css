@@ -755,6 +755,10 @@ hr{
 .bgcsh{
     background: rgb(105, 11, 134);
 }
+.bgvue{
+    background: rgb(53, 138, 20);
+}
+
 
 .bgjava{
     background: rgb(16, 66, 112);
@@ -769,13 +773,19 @@ hr{
     animation: none !important;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-
 }
-
+.langlogo.vue {
+    width : 76%;
+    margin: 0.9em auto ;
+}
 @media screen and (max-width: 800px) {
     .langlogo{
         width:300%;
         left:-40%;
+    }
+    .langlogo.vue{
+        width:210%;
+        left:-20%;
     }
 
     .imgjava{
