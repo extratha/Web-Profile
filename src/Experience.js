@@ -79,6 +79,7 @@ class Experience extends Component {
                             <div className='ex-text tr ml-auto' data-aos='fade-left' data-aos-easing='ease-out-back' data-aos-duration='1000' data-aos-delay='200'>
                                 <div className={exList}> UX/UI Designer (Creative Network Technology) </div>
                                 <div className={exList}> Frontend Developer (EdVISORY Co., Ltd.) </div>
+                                <div className={exList}> Frontend Developer (Thai Credit Retail Bank) </div>
                             </div>
                         </div>
                     </div>
