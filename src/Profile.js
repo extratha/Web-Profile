@@ -44,7 +44,7 @@ class Profile extends Component {
                                 data-aos-easing={aosEasing}
                                 data-aos-duration={aosDuration}
                                 data-aos-offset={aosOffset}
-                                data-aos-delay='300'>I am interested in new web technologies </div>
+                                data-aos-delay='300'>I am interested in new web technologies. </div>
 
                             </div>
                             <img src={cov} alt=" " className="profile-cov" ></img>
