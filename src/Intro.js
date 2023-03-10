@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style/App.css';
 import profile from './img/profile.png';
+import download from './img/download_white.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -25,10 +26,14 @@ class Intro extends Component {
     if (this.state.count > 0) {
       clearTimeout(timeout);
     }
+    const downLoadCvClicked = () => {
+      window.open('https://drive.google.com/file/d/1bOzdQAVVFpBb3Rasj6wnrGA1eMW27VyA/view')
+    }
 
     return (
       <div className="Intro" id='intro'>
         <div className="intro-wrap">
+          <img className="cv-download" src={download} alt="" onClick={downLoadCvClicked} />
           <div className="profile-img-sec dropshadow">
             <div className="profile-img-wrap">
               <div className="crooked">
